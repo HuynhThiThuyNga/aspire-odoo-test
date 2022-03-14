@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="1" verbose="0" name="extentReport"
+	parallel="tests" preserve-order="true">
+
+	<!--****************************************** Listners ********************************* -->
+
+	<listeners>
+		<listener class-name="listeners.SuiteListener" />
+		<listener class-name="listeners.TestListener" />
+	</listeners>
+
+
+	<!--****************************************** Tests ************************************** -->
+
+	<test name="TestSet_1">
+		<classes>
+			<class name="tests.TestDemo">
+				<methods>
+					<include name="testDemo1"></include>
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+
+	
+</suite>
